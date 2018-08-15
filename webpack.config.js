@@ -1,4 +1,10 @@
+var webpack = require('webpack');
 module.exports = {
+  plugins: [
+    new webpack.DefinePlugin({
+      PRODUCTION: JSON.stringify(true)
+    })
+  ],
   entry: ['./src/index.js'],
   output: {
     path: __dirname,
